@@ -10,6 +10,22 @@
 *.userosscache
 *.sln.docstates
 *.env
+.idea/
+# Ignore build outputs
+bin/
+obj/
+
+# Rider / IDE stuff
+.idea/
+*.DotSettings.user
+
+# User-specific files
+*.user
+*.suo
+
+# Temporary files
+*.cache
+*.tmp
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
