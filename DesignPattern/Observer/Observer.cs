@@ -1,0 +1,25 @@
+﻿// In case you need some guidance: https://refactoring.guru/design-patterns/observer
+
+namespace DesignPattern.Observer
+{
+    public class ConcreteObserver(string userName) : IObserver
+    {
+        public string UserName { get; set; } = userName;
+        
+        public void AddSubscriber(ISubject subject)
+        {
+            subject.RegisterObserver(this);
+        }
+        
+        public void RemoveSubscriber(ISubject subject)
+        {
+            subject.RemoveObserver(this);
+        }
+        
+        public void Update(string availability)
+        {
+            Console.WriteLine($"Notifying {UserName}, that the Subject changed its availability status to {availability}");
+        }
+        
+    }
+}
